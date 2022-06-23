@@ -1,0 +1,190 @@
+
+Page
+1
+of 10
+Class 1 -
+API -
+client - the one who is making a request
+server - the one who responds to the request of client
+client server architecture
+1 tier archtiecture
+- Presentation layer, application layer and data layer are available at
+one place
+eg. calculator, excel etc
+2 tier architecture
+- presentation layer is available at one end, application and data layer
+is available at another end
+eg. Macdonalds, pizza hut, subway
+3 tier archiecture
+- presentation layer is available at one end, application layer is
+available at second end and data layer is available at third end
+eg. IG, FB etc
+Ditributed architecture
+Class 2 -
+recap
+API - it transfers the information from presentation layer to data layer
+Client -
+Server -
+Presentation layer - it provides UI for user
+application layer - business logic is written here
+data layer - data associated to the application exists in data layer
+Client server architecture -
+1 - tier arch -
+2 - tier arch -
+3 - tier arch -
+CRUD - create, retrive, update, delete
+These are the operations we perform while testing UI, API and DB
+What is web services?
+API's which are hosted over the internet, we call it web services
+SOAP (simple object access protocol)
+REST (representational state transfer)
+RESTful web services
+The reason of testing the api
+-- to identify the glitch in the api
+To reach the API / to contact the API we need
+Address of the server -
+URL + end point
+hrm.syntaxtechs.net/syntaxapi/api/createUser.php
+HTTP - hyper text transfer protocol
+CRUD -
+To create a record in system - POST METHOD
+To retrieve a record in system - GET METHOD
+To Update a record in system - PUT METHOD
+To delete a record in system - DELETE METHOD
+swagger - it is a document that explains all the requirements of API
+TO CREATE ADMIN USER IN THE SYSTEM -
+Base url  + endpoint
+hrm.syntaxtechs.net/syntaxapi/api/createUser.php
+TYPE  OF METHOD - POST
+We will use JSON format to send the payload/body
+BODY/PAYLOAD -
+{
+"name": "batch12admin",
+"email": "batch12@test.com",
+"password": "Test@123"
+}
+Content-type = application/json
+click on send button
+observe response - 201
+class 3 -
+recap
+web services - REST, SOAP
+REST - representational state transfer
+POST, GET, PUT, DELETE
+document required for API testing - Swagger
+Base URL - address of the server
+End point - for every operation we have unique end point
+200 - OK - GET
+201 - Created - Create a record
+Authentication - it verifies your identity and give you the access to the
+system
+Authorization - it explains what all the operations you can perform in the
+application
+API -
+Who are you?
+Are you allowed to use the system?
+Show your ID?
+What permissions you have?
+State ful application - where the state is set to true
+State less application - where there is no server memory
+We deal with tokens here
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
+eyJpYXQiOjE2NTQ5NjUwNjksImlzcyI6ImxvY2FsaG9zdCIsImV4cCI6MTY1NTAwODI2OSwidX
+NlcklkIjoiMzc3MiJ9.
+g2t4DN9JxpDP2lMW1aFVNtRryrdmSDFL_xHav_9F3Fw
+3 types of token we receive -
+Bearer token
+MAC token
+grants
+JWT - json web token
+Header -
+Payload
+Signature
+TO CREATE AN EMPLOYEE -
+Base url + end point
+hrm.syntaxtechs.net/syntaxapi/api/createEmployee.php
+TYPE OF METHOD - POST
+{
+"emp_firstname": "manana",
+"emp_lastname": "patsatsia",
+"emp_middle_name": "MS",
+"emp_gender": "F",
+"emp_birthday": "2000-06-11",
+"emp_status": "Probation",
+"emp_job_title": "QA"
+}
+content-type - application/json
+to get the details of one employee, we need query parameters
+Cookies -
+Cookies are small blocks of data created by a web server while a user is
+browsing a website and placed on user's computer or other
+devices by the user's browser
+Why they need to store this information
+to reduce the total number of login attempts
+track/monitor your activity and use it for advertisement purpose
+in-house cookies
+third party cookies
+Class 4 -
+Recap -
+stateful application
+stateless application
+1 bearer token
+2 MAC
+3 Grants
+Bearer Token -
+JSON WEB TOKEN - JWT
+it has 3 parts
+header
+payload
+signature
+CRUD -
+create, retrieve, update, delete
+creating an employee -
+post, base url + endpoint
+body, headers, authorization - bearer token
+response code should be - 201 created
+to fetch the record of one employee from DB
+- we need to pass query parameter
+cookies -
+Retrieve all the employees from the system -
+GET -
+Base url + endpoint
+GET all the job titles
+GET -
+Base url + endpoint
+PUT vs POST
+In post method, you are creating a new record in the DB
+In put method, you are updating existing record in the DB
+In put method, we get 200 status code as a response
+In post method, we get 201 status code as a response
+PUT method
+Base url + endpoint
+type of method - PUT
+Body
+{
+"employee_id": "34514A",
+"emp_firstname": "edward",
+"emp_lastname": "sisi",
+"emp_middle_name": "MS1",
+"emp_gender": "M",
+"emp_birthday": "1995-06-12",
+"emp_status": "confirmed",
+"emp_job_title": "Manager"
+}
+To update partial information of the employee
+type of method
+- Patch
+base url + end point
+body
+{
+"employee_id": "34514A",
+"emp_status": "Not on probation",
+"emp_job_title": "Dy Manager"
+}
+we use chai assertion library in postman to verify the response
+pm is the object we use to call all the functions in postman
+test is the tab where we can find all the snippets for the relevant
+functions
+we can change the name of the method and the status code as per the
+requirement
+Also, we can have multiple tests in a single request

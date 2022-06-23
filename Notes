@@ -134,3 +134,79 @@ mvn clean - it cleans your target folder
 mvn test -  to execute our test cases
 verify - verifies your code
 package - convert your code to packages
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+
+API Notes -
+
+Class 5 -
+
+
+Rest assured API
+
+It is DSL (domain specific language)
+It is java based library that is used to automation rest API'
+
+given, when, then
+
+
+Rest assured follows the functionality of BDD
+
+ given - pre condition - request preparation, request specification
+
+    given - prepare the request
+    when  - hitting the end point (send the request)
+    then - expected response
+
+
+NOTE: baseURI = baseURL
+
+  //hamcrest matchers --
+  it is popular framework that helps us to create the matcher objects.
+
+  prettyPrint - it is used to print response in console
+
+
+ Class 6  API
+
+ Java rest assured API -
+
+ given - prepare the request
+ when  - making call
+ then - verification/assertion
+
+ Class 7 Api
+ To create an employee we use-
+ POST -
+ Base url = base URI
+ end point
+ Headers
+
+ then -
+
+ we use method jsonPath()
+
+ to retrieve employee from the database
+ Get -
+ query parameter
+ token
+ @Test we taking from junit to execute our test cases
+ @Fix method order we use to change the flow of execution(Name.Ascending-alphabetical order)
+
+ To update the details of the employee
+ PUT
+ body
+ header
+ token
+ end point
+
+
+
+
+
+
+
+
+

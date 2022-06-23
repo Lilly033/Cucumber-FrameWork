@@ -15,12 +15,12 @@ import org.junit.runner.RunWith;
         //if we set it to true,it will quickly scan all gherkin steps whether they are implemented or not
         //if we set it to true,it stops actual execution
         //to execute scripts in real time,we should set this value to false
-        dryRun = false,
+        dryRun = true,
 
         //it means the console output for cucumber test is having irrelevant information
         //when we set it to true,it simply removes all the irrelevant information
         monochrome = true,
-        tags = "@smoke"
+        tags = "@api"
 )
 
 public class Smoke {
