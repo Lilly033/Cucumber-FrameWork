@@ -20,7 +20,11 @@ import org.junit.runner.RunWith;
         //it means the console output for cucumber test is having irrelevant information
         //when we set it to true,it simply removes all the irrelevant information
         monochrome = true,
-        tags = "@Smoke"
+          tags = "@smoke",
+        plugin = {"html:target/cucumber.html","pretty","json:target/cucumber.json",
+                
+
+        }
 )
 
 public class Smoke {
