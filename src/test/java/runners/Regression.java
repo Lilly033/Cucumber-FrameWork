@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
         //when we set it to true,it simply removes all the irrelevant information
         monochrome = true,
         tags = "@regression",
-            plugin = {"html:target/cucumber.html","pretty","json:target/cucumber.json",
+            plugin = {"html:target/cucumber.html","pretty","json:target/cucumber.json"
 
 
         }
